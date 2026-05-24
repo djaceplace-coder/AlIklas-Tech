@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Syne", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "DM Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  /* ── PRIMARY GREENS (Brand Core) ── */
+  --green-900: #052e16;
+  --green-800: #14532d;
+  --green-700: #15803d;
+  --green-600: #16a34a;
+  --green-500: #22c55e;
+  --green-400: #4ade80;
+  --green-300: #86efac;
+  --green-glow: rgba(34, 197, 94, 0.35);
+  --green-glow-soft: rgba(34, 197, 94, 0.12);
+
+  /* ── SOLAR GOLD (Energy Accent) ── */
+  --gold-500: #f59e0b;
+  --gold-400: #fbbf24;
+  --gold-300: #fde68a;
+  --gold-glow: rgba(245, 158, 11, 0.35);
+  --gold-glow-soft: rgba(245, 158, 11, 0.10);
+
+  /* ── ELECTRIC BLUE (Technical/Engineering) ── */
+  --blue-500: #3b82f6;
+  --blue-400: #60a5fa;
+  --blue-glow: rgba(59, 130, 246, 0.25);
+
+  /* ── DEEP BACKGROUNDS ── */
+  --bg-void: #020b06;
+  --bg-deep: #030f07;
+  --bg-surface: #071a0e;
+  --bg-elevated: #0d2b18;
+  --bg-overlay: rgba(7, 26, 14, 0.9);
+
+  /* ── NEUTRAL SYSTEM ── */
+  --text-primary: #f0fdf4;
+  --text-secondary: #bbf7d0;
+  --text-muted: #6b7280;
+  --text-dim: #374151;
+  --border-soft: rgba(34, 197, 94, 0.12);
+  --border-medium: rgba(34, 197, 94, 0.25);
+  --border-strong: rgba(34, 197, 94, 0.45);
+
+  /* ── GRADIENTS ── */
+  --gradient-brand: linear-gradient(135deg, #16a34a 0%, #22c55e 50%, #4ade80 100%);
+  --gradient-hero: linear-gradient(180deg, #020b06 0%, #030f07 60%, #052e16 100%);
+  --gradient-card: linear-gradient(135deg, rgba(22,163,74,0.08) 0%, rgba(7,26,14,0.95) 100%);
+  --gradient-gold: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%);
+
+  /* ── SHADOWS ── */
+  --shadow-green: 0 0 40px rgba(34,197,94,0.2), 0 0 80px rgba(34,197,94,0.08);
+  --shadow-gold: 0 0 30px rgba(245,158,11,0.3);
+  --shadow-card: 0 4px 24px rgba(0,0,0,0.4);
+}
+
+body {
+  background-color: var(--bg-deep);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Base custom classes to match the design */
+.bg-gradient-brand {
+    background: var(--gradient-brand);
+}
+.bg-gradient-hero {
+    background: var(--gradient-hero);
+}
+.bg-gradient-glass {
+    background: var(--gradient-glass);
+}
+.bg-surface {
+    background: var(--bg-surface);
+}
+
+/* Animations */
+@keyframes wordReveal {
+  from { opacity: 0; transform: translateY(40px) skewY(3deg); filter: blur(4px); }
+  to   { opacity: 1; transform: translateY(0)    skewY(0);    filter: blur(0); }
+}
+
+@keyframes particlePulse {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50%       { opacity: 1;   transform: scale(1.4); }
+}
+
+@keyframes solarOrbit {
+  from { transform: rotate(0deg) translateX(120px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(120px) rotate(-360deg); }
+}
+
+@keyframes energyRing {
+  0%   { transform: scale(0.8); opacity: 0.8; }
+  100% { transform: scale(2.5); opacity: 0; }
+}
+
+@keyframes circuitTrace {
+  from { stroke-dashoffset: 1000; opacity: 0; }
+  to   { stroke-dashoffset: 0;    opacity: 1; }
+}
+
+@keyframes odometer {
+  from { transform: translateY(100%); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+@keyframes cardFloat {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-6px); }
+}
+
+@keyframes shimmer {
+  from { background-position: -200% center; }
+  to   { background-position:  200% center; }
+}
+
+@keyframes scanLine {
+  0%   { top: 0%; opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+@keyframes glowBreathe {
+  0%, 100% { box-shadow: 0 0 20px rgba(34,197,94,0.2); }
+  50%       { box-shadow: 0 0 60px rgba(34,197,94,0.5), 0 0 120px rgba(34,197,94,0.15); }
+}
+
+@keyframes borderTrace {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes floatGentle {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33%       { transform: translateY(-12px) rotate(1deg); }
+  66%       { transform: translateY(-6px) rotate(-0.5deg); }
+}
+
+@keyframes scrollBounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(8px); }
+}
+
+@keyframes staggerIn {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes rotateSlow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes powerFill {
+  from { width: 0%; }
+  to   { width: var(--target-width); }
+}
+
+.animate-word-reveal { animation: wordReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.animate-solar-orbit { animation: solarOrbit 8s linear infinite; }
+.animate-glow-breathe { animation: glowBreathe 6s infinite; }
+.animate-rotate-slow { animation: rotateSlow 25s linear infinite; }
+.animate-rotate-slow-reverse { animation: rotateSlow 40s linear infinite reverse; }
+.animate-scroll-bounce { animation: scrollBounce 2s infinite; }
+.animate-stagger-in { animation: staggerIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.animate-scan-line { animation: scanLine 4s linear infinite; }
+.animate-circuit-trace { animation: circuitTrace 3s ease-out forwards; }
+.animate-power-fill { animation: powerFill 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
