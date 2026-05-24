@@ -10,7 +10,7 @@ export const About: React.FC<{ setCurrentPage: (page: string) => void }> = () =>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24">
                     <div>
                         <div className="text-xs font-bold text-green-500 tracking-[3px] uppercase mb-4">Our Origin</div>
-                        <h1 className="font-display font-extrabold text-[10vw] sm:text-5xl md:text-[52px] leading-[1.1] tracking-[-2px] mb-6 sm:mb-8">
+                        <h1 className="font-display font-extrabold text-4xl sm:text-5xl md:text-[52px] leading-[1.1] tracking-[-2px] mb-6 sm:mb-8 break-words">
                             Engineered for <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-600">Nigeria.</span>
                         </h1>
                         <p className="text-xl text-gray-300 mb-6 leading-relaxed">
@@ -202,12 +202,12 @@ export const Contact: React.FC = () => {
                      </div>
                 </div>
 
-                <div className="bg-[#071a0e] border border-green-900/40 rounded-3xl p-6 sm:p-8 lg:p-16 grid grid-cols-1 lg:grid-cols-5 gap-12 sm:gap-16 relative overflow-hidden">
+                <div className="bg-[#071a0e] border border-green-900/40 rounded-3xl p-6 sm:p-8 lg:p-12 grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 relative overflow-hidden">
                     <div className="absolute top-0 left-0 w-64 h-64 bg-green-500/10 blur-[80px] rounded-full pointer-events-none"></div>
 
-                    <div className="col-span-2 relative z-10">
-                        <h1 className="font-display font-bold text-2xl sm:text-3xl text-white mb-4">Start Your Project</h1>
-                        <p className="text-gray-400 mb-12">Free site survey • 48-hour design • Nationwide coverage</p>
+                    <div className="relative z-10 flex flex-col justify-center">
+                        <h1 className="font-display font-bold text-3xl sm:text-4xl text-white mb-4">Start Your Project</h1>
+                        <p className="text-gray-400 mb-12 text-lg">Free site survey • 48-hour design • Nationwide coverage</p>
                         
                         <div className="space-y-8">
                             <div className="flex items-start gap-4">
@@ -234,7 +234,7 @@ export const Contact: React.FC = () => {
                         </div>
                     </div>
 
-                    <div className="col-span-1 lg:col-span-3 bg-[#020b06] p-6 sm:p-8 rounded-2xl border border-green-900/30">
+                    <div className="bg-[#020b06] p-6 sm:p-8 lg:p-10 rounded-2xl border border-green-900/30 w-full shadow-2xl relative z-10">
                         <form className="space-y-6" onSubmit={(e) => { e.preventDefault(); alert("Request Received!"); }}>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
@@ -275,12 +275,14 @@ export const Contact: React.FC = () => {
 
 // --- CAREERS PAGE ---
 export const Careers: React.FC = () => {
+    const [showModal, setShowModal] = useState(false);
+
     return (
         <div className="w-full pt-28 pb-24">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-12 sm:mb-16 relative">
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-green-500/20 blur-[100px] rounded-full"></div>
-                    <h1 className="font-display font-extrabold text-3xl md:text-[52px] tracking-[-2px] text-white relative z-10">Build the Grid.</h1>
+                    <h1 className="font-display font-extrabold text-4xl md:text-[52px] tracking-[-2px] text-white relative z-10 break-words">Build the Grid.</h1>
                     <p className="text-xl text-gray-400 mt-4 relative z-10">Join our engineering and operations team.</p>
                 </div>
 
@@ -294,7 +296,7 @@ export const Careers: React.FC = () => {
                         <p className="text-sm text-gray-300 mb-8 leading-relaxed">
                             Lead technical design and ETAP modeling for commercial hybrid arrays. Oversee field installation and NEMSA certification processes.
                         </p>
-                        <button className="text-green-500 font-bold hover:text-green-400 transition-colors border-b border-green-500 pb-1">Apply Now →</button>
+                        <button onClick={() => setShowModal(true)} className="text-green-500 font-bold hover:text-green-400 transition-colors border-b border-green-500 pb-1">Apply Now →</button>
                     </div>
 
                     <div className="bg-[#071a0e] p-6 sm:p-8 rounded-2xl border border-green-900/30 hover:border-green-500/50 transition-colors">
@@ -306,12 +308,36 @@ export const Careers: React.FC = () => {
                         <p className="text-sm text-gray-300 mb-8 leading-relaxed">
                             Manage international procurement, shipping container logistics, port clearance, and warehousing of high-volume solar equipment and electrical materials.
                         </p>
-                        <button className="text-green-500 font-bold hover:text-green-400 transition-colors border-b border-green-500 pb-1">Apply Now →</button>
+                        <button onClick={() => setShowModal(true)} className="text-green-500 font-bold hover:text-green-400 transition-colors border-b border-green-500 pb-1">Apply Now →</button>
                     </div>
                 </div>
 
                 <CircuitSVG />
             </div>
+
+            {/* Application Modal */}
+            {showModal && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center px-4 bg-black/80 backdrop-blur-sm" onClick={() => setShowModal(false)}>
+                    <div className="bg-[#071a0e] border border-green-900/50 rounded-2xl p-8 max-w-md w-full shadow-2xl" onClick={(e) => e.stopPropagation()}>
+                        <div className="flex justify-between items-center mb-6">
+                            <h2 className="text-2xl font-bold text-white font-display">Apply Now</h2>
+                            <button onClick={() => setShowModal(false)} className="text-gray-400 hover:text-white transition-colors text-xl">&times;</button>
+                        </div>
+                        <p className="text-gray-300 mb-6 leading-relaxed">
+                            Please send your CV and Cover Letter to HQ. You can contact our recruitment team directly via WhatsApp to submit your documents and schedule an interview.
+                        </p>
+                        <a 
+                            href="https://wa.me/2348166614479?text=Hello,%20I%20would%20like%20to%20apply%20for%20a%20position%20at%20Al-Iklas%20Tech." 
+                            target="_blank" 
+                            rel="noreferrer"
+                            className="w-full flex justify-center items-center gap-2 py-4 bg-green-600 hover:bg-green-500 text-white rounded-xl font-bold transition-colors"
+                        >
+                            <span>Contact via WhatsApp</span>
+                            <span className="text-xl">💬</span>
+                        </a>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };

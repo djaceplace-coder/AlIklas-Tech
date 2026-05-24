@@ -151,7 +151,7 @@ export const Home: React.FC<{ setCurrentPage: (page: string) => void }> = ({ set
             </div>
             
             {/* Headline */}
-            <h1 className="font-display font-extrabold text-[12vw] sm:text-6xl md:text-7xl lg:text-[6rem] leading-[1.1] sm:leading-[0.95] tracking-tight sm:tracking-[-2px] mb-6 sm:mb-8 max-w-4xl">
+            <h1 className="font-display font-extrabold text-4xl sm:text-5xl md:text-7xl lg:text-[6rem] leading-[1.1] sm:leading-[0.95] tracking-tight sm:tracking-[-2px] mb-6 sm:mb-8 max-w-4xl break-words">
                <span className="block opacity-0 animate-word-reveal" style={{animationDelay: '0ms'}}>Engineered</span>
                <span className="block opacity-0 animate-word-reveal text-transparent bg-clip-text bg-gradient-to-br from-yellow-300 via-yellow-500 to-yellow-600 drop-shadow-[0_0_30px_rgba(245,158,11,0.2)]" style={{animationDelay: '80ms'}}>Sunlight.</span>
                <span className="block opacity-0 animate-word-reveal" style={{animationDelay: '160ms'}}>Precision</span>

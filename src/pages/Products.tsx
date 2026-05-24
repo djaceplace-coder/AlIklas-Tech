@@ -24,7 +24,7 @@ export const Products: React.FC = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-12 sm:mb-16 relative">
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-green-500/10 blur-[100px] rounded-full"></div>
-                    <h1 className="font-display font-extrabold text-3xl sm:text-[34px] md:text-[48px] tracking-[-1px] sm:tracking-[-1.5px] text-white relative z-10">Equipment Catalogue</h1>
+                    <h1 className="font-display font-extrabold text-4xl sm:text-[40px] md:text-[56px] tracking-[-1px] sm:tracking-[-1.5px] text-white relative z-10 break-words">Equipment Catalogue</h1>
                     <p className="text-base sm:text-xl text-gray-400 mt-4 relative z-10 max-w-2xl mx-auto">
                         Tier-1 engineering materials, directly imported and available for wholesale or retail order. Quality you can trust.
                     </p>
