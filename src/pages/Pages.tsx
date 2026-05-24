@@ -10,7 +10,7 @@ export const About: React.FC<{ setCurrentPage: (page: string) => void }> = () =>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24">
                     <div>
                         <div className="text-xs font-bold text-green-500 tracking-[3px] uppercase mb-4">Our Origin</div>
-                        <h1 className="font-display font-extrabold text-3xl md:text-[52px] leading-none tracking-[-2px] mb-6 sm:mb-8">
+                        <h1 className="font-display font-extrabold text-[10vw] sm:text-5xl md:text-[52px] leading-[1.1] tracking-[-2px] mb-6 sm:mb-8">
                             Engineered for <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-600">Nigeria.</span>
                         </h1>
                         <p className="text-xl text-gray-300 mb-6 leading-relaxed">
@@ -69,7 +69,7 @@ export const Services: React.FC = () => {
         <div className="w-full pt-28 pb-24">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-12 sm:mb-16">
-                    <h1 className="font-display font-extrabold text-3xl md:text-[52px] tracking-[-2px] text-white">Full-Spectrum Engineering</h1>
+                    <h1 className="font-display font-extrabold text-4xl md:text-[52px] tracking-[-2px] text-white">Full-Spectrum Engineering</h1>
                 </div>
                 <EnergyFlowDiagram />
 
@@ -77,12 +77,12 @@ export const Services: React.FC = () => {
                     {[
                         { num: "01", title: "Solar PV Systems & Inverters", desc: "Our core engineering offering designed for maximal uptime in the Nigerian operating environment. We handle everything from standard residential fit-outs to complex industrial hybrid arrays.", img: "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&q=80&w=800", icon: "☀️", color: "text-yellow-500" },
                         { num: "02", title: "Electrical Installations & Maintenance", desc: "NEMSA-compliant electrical wiring, full property home services, electrical panel upgrades, and heavy-duty industrial transmission setups.", img: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=800", icon: "⚡", color: "text-blue-500" },
-                        { num: "03", title: "HD Solar Surveillance", desc: "Advanced Dual Lens Solar PTZ Cameras for 24/7 off-grid security. Perfect for estates, large compounds, and rural facilities.", img: "https://images.unsplash.com/photo-1555864326-5cf32fa6ce38?auto=format&fit=crop&q=80&w=800", icon: "📷", color: "text-gray-300" },
-                        { num: "04", title: "Equipment Import & Supply", desc: "Direct importers and major suppliers of premium solar panels, hybrid inverters, batteries, and electrical materials at wholesale scale.", img: "https://images.unsplash.com/photo-1586528116311-ad8ed7c30a77?auto=format&fit=crop&q=80&w=800", icon: "📦", color: "text-green-500" },
-                        { num: "05", title: "Solar Home Roof Panels", desc: "Tailor-made roof integrations for homes. Maximize aesthetics without compromising on robust energy generation for your family.", img: "https://images.unsplash.com/photo-1509391366360-15cb3d9ffba2?auto=format&fit=crop&q=80&w=800", icon: "🏠", color: "text-yellow-300" },
-                        { num: "06", title: "Flexible Solar Financing", desc: "Installmental payment services and lease-to-own options so you can transition to solar immediately without immense upfront capital.", img: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=800", icon: "💳", color: "text-green-400" }
+                        { num: "03", title: "HD Solar Surveillance", desc: "Advanced Dual Lens Solar PTZ Cameras for 24/7 off-grid security. Perfect for estates, large compounds, and rural facilities.", img: "https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?auto=format&fit=crop&q=80&w=800", icon: "📷", color: "text-gray-300" },
+                        { num: "04", title: "Equipment Import & Supply", desc: "Direct importers and major suppliers of premium solar panels, hybrid inverters, batteries, and electrical materials at wholesale scale.", img: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&q=80&w=800", icon: "📦", color: "text-green-500" },
+                        { num: "05", title: "Solar Home Roof Panels", desc: "Tailor-made roof integrations for homes. Maximize aesthetics without compromising on robust energy generation for your family.", img: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&q=80&w=800", icon: "🏠", color: "text-yellow-300" },
+                        { num: "06", title: "Flexible Solar Financing", desc: "Installmental payment services and lease-to-own options so you can transition to solar immediately without immense upfront capital.", img: "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&q=80&w=800", icon: "💳", color: "text-green-400" }
                     ].map((s, i) => (
-                        <div key={i} className={`flex flex-col md:flex-row gap-16 items-center ${i%2 !== 0 ? 'md:flex-row-reverse' : ''}`}>
+                        <div key={i} className={`flex flex-col md:flex-row gap-8 lg:gap-16 items-center ${i%2 !== 0 ? 'md:flex-row-reverse' : ''}`}>
                             <div className="flex-1 w-full bg-[#071a0e] aspect-[4/3] md:aspect-square rounded-3xl border border-green-900/30 flex items-center justify-center relative overflow-hidden group hover:border-green-500/50 transition-colors cursor-pointer">
                                 <img src={s.img} alt={s.title} className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-700 mix-blend-screen" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#030f07] via-transparent to-transparent opacity-90"></div>
@@ -132,7 +132,7 @@ export const Projects: React.FC = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {[
-                        { name: "Dangote Logistics Warehouse Complex", kw: 2400, type: "Industrial Solar", state: "Lagos", year: 2024, client: "Dangote Group", img: "https://images.unsplash.com/photo-1596701062973-20da9a57492c?auto=format&fit=crop&q=80&w=800", details: "A massive 2.4MWp rooftop installation combined with battery energy storage system. This setup displaced over 95% of their diesel usage, providing stable power for logistics operations round the clock." },
+                        { name: "Dangote Logistics Warehouse Complex", kw: 2400, type: "Industrial Solar", state: "Lagos", year: 2024, client: "Dangote Group", img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800", details: "A massive 2.4MWp rooftop installation combined with battery energy storage system. This setup displaced over 95% of their diesel usage, providing stable power for logistics operations round the clock." },
                         { name: "Kaduna State School Electrification", kw: 850, type: "Mini-Grid", state: "Kaduna", year: 2024, client: "Kaduna State SUBEB", img: "https://images.unsplash.com/photo-1521618755572-156ae0cdd74d?auto=format&fit=crop&q=80&w=800", details: "Electrifying 14 remote schools across Kaduna State using a solar mini-grid model. Complete with PAYG metering and cloud-based centralized battery management." },
                         { name: "Kano Cold Storage Facility", kw: 420, type: "Battery Storage", state: "Kano", year: 2022, client: "Kano State FADAMA", img: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&q=80&w=800", details: "Specialized cold chain facility requiring zero downtime. Installed 420kWp solar arrays backed by 2MWh BESS to ensure perishable goods remain frozen during national grid failures." },
                         { name: "Gwarimpa Estate Phase 3", kw: 640, type: "Residential Solar", state: "Abuja", year: 2023, client: "Private Developer", img: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&q=80&w=800", details: "Distributed solar power for 320 residential units, utilizing a shared BESS infrastructure to minimize individual home layout footprint while maximizing power uptime." },
@@ -141,7 +141,7 @@ export const Projects: React.FC = () => {
                     ].map((proj, idx) => (
                         <div key={idx} onClick={() => setExpandedProject(expandedProject === idx ? null : idx)} className="bg-[#071a0e] rounded-xl border border-green-900/30 overflow-hidden group hover:border-green-500/80 transition-colors cursor-pointer flex flex-col">
                             <div className="h-48 bg-[#020b06] p-6 border-b border-green-900/30 flex flex-col justify-between relative overflow-hidden shrink-0">
-                                <img src={proj.img} alt={proj.name} className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" />
+                                <img src={proj.img} alt={proj.name} className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 transition-transform duration-700 mix-blend-screen" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-green-500/5 blur-2xl rounded-full"></div>
                                 <div className="flex justify-between items-start z-10">

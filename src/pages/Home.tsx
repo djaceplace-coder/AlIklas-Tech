@@ -42,31 +42,31 @@ export const Home: React.FC<{ setCurrentPage: (page: string) => void }> = ({ set
       icon: "💸", title: "Flexible Solar Financing",
       desc: "Premium Tier-1 solar systems made accessible through custom installmental payment plans and flexible financing.",
       specs: ["12-36 month plans", "Low initial deposit", "Zero markup", "Pay-as-you-go tech"],
-      color: "#EC4899", badge: "New Offering", img: "https://images.unsplash.com/photo-1618090584126-129cd1f3f4c6?auto=format&fit=crop&q=80&w=800"
+      color: "#EC4899", badge: "New Offering", img: "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&q=80&w=800"
     },
     {
       icon: "📦", title: "Equipment Import & Supply",
       desc: "Direct importers and suppliers of all kinds of premium solar and electrical materials. Exceptional quality at wholesale scales.",
       specs: ["Tier-1 Solar Panels", "Hybrid Inverters", "Cables & Wiring", "Wholesale supply"],
-      color: "#22C55E", badge: "Wholesale", img: "https://images.unsplash.com/photo-1586528116311-ad8ed7c30a77?auto=format&fit=crop&q=80&w=800"
+      color: "#22C55E", badge: "Wholesale", img: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&q=80&w=800"
     },
     {
       icon: "📷", title: "Solar Surveillance Security",
       desc: "HD Dual Lens Solar PTZ Cameras designed for 24/7 off-grid security. Independent power and connectivity for any location.",
       specs: ["HD Dual Lens", "Solar PTZ Cameras", "24/7 Monitoring", "No-grid required"],
-      color: "#A8A29E", badge: "High Demand", img: "https://images.unsplash.com/photo-1555864326-5cf32fa6ce38?auto=format&fit=crop&q=80&w=800"
+      color: "#A8A29E", badge: "High Demand", img: "https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?auto=format&fit=crop&q=80&w=800"
     },
     {
       icon: "🔋", title: "Battery Energy Storage",
       desc: "High-density LiFePO4 and NMC storage solutions tailored to displace diesel generation completely during outages.",
       specs: ["10kWh – 2MWh capacity", "Smart BMS control", "Peak-shaving", "Deep-cycle durability"],
-      color: "#F97316", badge: null, img: "https://images.unsplash.com/photo-1617789454848-ae9ecaf967c5?auto=format&fit=crop&q=80&w=800"
+      color: "#F97316", badge: null, img: "https://images.unsplash.com/photo-1565800489013-c64859d0c2d5?auto=format&fit=crop&q=80&w=800"
     },
     {
       icon: "🏭", title: "Power-as-a-Service",
       desc: "Zero-capex solar for commercial spaces. We design, finance, install, and operate the plant while you pay for consumed power.",
       specs: ["Zero initial capex", "Pay-per-kWh", "Diesel displacement", "24/7 O&M"],
-      color: "#06B6D4", badge: "C&I Focus", img: "https://images.unsplash.com/photo-1596701062973-20da9a57492c?auto=format&fit=crop&q=80&w=800"
+      color: "#06B6D4", badge: "C&I Focus", img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800"
     }
   ];
 
@@ -151,7 +151,7 @@ export const Home: React.FC<{ setCurrentPage: (page: string) => void }> = ({ set
             </div>
             
             {/* Headline */}
-            <h1 className="font-display font-extrabold text-[32px] min-[375px]:text-[36px] min-[400px]:text-[42px] sm:text-[3.5rem] lg:text-[5rem] leading-[1] sm:leading-[0.95] tracking-tight sm:tracking-[-2px] mb-6 sm:mb-8 max-w-4xl break-words hyphens-auto">
+            <h1 className="font-display font-extrabold text-[12vw] sm:text-6xl md:text-7xl lg:text-[6rem] leading-[1.1] sm:leading-[0.95] tracking-tight sm:tracking-[-2px] mb-6 sm:mb-8 max-w-4xl">
                <span className="block opacity-0 animate-word-reveal" style={{animationDelay: '0ms'}}>Engineered</span>
                <span className="block opacity-0 animate-word-reveal text-transparent bg-clip-text bg-gradient-to-br from-yellow-300 via-yellow-500 to-yellow-600 drop-shadow-[0_0_30px_rgba(245,158,11,0.2)]" style={{animationDelay: '80ms'}}>Sunlight.</span>
                <span className="block opacity-0 animate-word-reveal" style={{animationDelay: '160ms'}}>Precision</span>
@@ -225,12 +225,9 @@ export const Home: React.FC<{ setCurrentPage: (page: string) => void }> = ({ set
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {SERVICES.map((s, idx) => (
-                  <div key={idx} className="group relative bg-[#071a0e] border border-green-900/30 rounded-[20px] p-6 sm:p-8 transition-all duration-350 hover:-translate-y-2 hover:border-green-500/60 overflow-hidden cursor-pointer flex flex-col min-h-[340px]"
-                       style={{ backgroundImage: `linear-gradient(135deg, transparent, var(--bg-surface))` }}
-                       onMouseEnter={(e) => e.currentTarget.style.backgroundImage = `linear-gradient(135deg, ${s.color}15, var(--bg-surface))`}
-                       onMouseLeave={(e) => e.currentTarget.style.backgroundImage = `linear-gradient(135deg, transparent, var(--bg-surface))`}>
+                  <div key={idx} className="group relative bg-[#071a0e] border border-green-900/30 rounded-[20px] p-6 sm:p-8 transition-all duration-350 hover:-translate-y-2 hover:border-green-500/60 overflow-hidden cursor-pointer flex flex-col min-h-[340px]">
                       
-                      <img src={s.img} alt={s.title} className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-40 transition-opacity duration-700 mix-blend-luminosity" />
+                      <img src={s.img} alt={s.title} className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-50 transition-opacity duration-700 mix-blend-screen" />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#030f07] via-[#030f07]/90 to-transparent"></div>
                       
                       {/* Active Line (Hover) */}
@@ -314,14 +311,14 @@ export const Home: React.FC<{ setCurrentPage: (page: string) => void }> = ({ set
              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                  {[
                       { name: "Kaduna State School Electrification", kw: 850, type: "Mini-Grid", state: "Kaduna", year: 2024, maxKw: 2400, img: "https://images.unsplash.com/photo-1521618755572-156ae0cdd74d?auto=format&fit=crop&q=80&w=800", details: "A comprehensive off-grid solution powering 15 schools across rural Kaduna. System utilizes deep-cycle LiFePO4 storage to guarantee 24/7 power for computer labs and administrative blocks." },
-                      { name: "Dangote Logistics Warehouse Complex", kw: 2400, type: "Industrial Solar", state: "Lagos", year: 2024, maxKw: 2400, img: "https://images.unsplash.com/photo-1596701062973-20da9a57492c?auto=format&fit=crop&q=80&w=800", details: "Massive scale rooftop PV array designed to completely offset daytime diesel consumption for their primary staging warehouse. Features advanced active harmonic filtering." },
+                      { name: "Dangote Logistics Warehouse Complex", kw: 2400, type: "Industrial Solar", state: "Lagos", year: 2024, maxKw: 2400, img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800", details: "Massive scale rooftop PV array designed to completely offset daytime diesel consumption for their primary staging warehouse. Features advanced active harmonic filtering." },
                       { name: "Gwarimpa Estate Phase 3", kw: 640, type: "Residential Solar", state: "Abuja", year: 2023, maxKw: 2400, img: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&q=80&w=800", details: "Community micro-grid serving 50 premium residential units. Features centralized string inverters with localized battery banks for individual households." },
                  ].map((proj, idx) => {
                      const isExpanded = expandedProject === idx;
                      return (
                      <div key={idx} onClick={() => setExpandedProject(isExpanded ? null : idx)} className={`group relative bg-[#071a0e] rounded-xl overflow-hidden border border-green-900/30 p-6 hover:border-green-500 hover:shadow-[0_0_30px_rgba(34,197,94,0.15)] transition-all cursor-pointer flex flex-col ${isExpanded ? 'h-auto ring-1 ring-green-500' : 'h-[360px]'}`}>
                          
-                         <img src={proj.img} alt={proj.name} className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-40 transition-opacity duration-700" />
+                         <img src={proj.img} alt={proj.name} className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-50 transition-opacity duration-700 mix-blend-screen" />
                          <div className="absolute inset-0 bg-gradient-to-t from-[#020b06] via-[#020b06]/80 to-transparent"></div>
                          <div className="absolute top-0 left-0 w-1 h-full bg-green-600 z-20"></div>
 

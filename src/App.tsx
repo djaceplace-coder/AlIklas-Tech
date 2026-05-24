@@ -49,7 +49,7 @@ export default function App() {
         href="https://wa.me/2348166614479" 
         target="_blank" 
         rel="noreferrer" 
-        className="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-50 flex items-center text-green-400/90 font-mono text-sm sm:text-base tracking-[2px] uppercase font-bold hover:text-green-300 drop-shadow-[0_4px_8px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all"
+        className="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-50 flex items-center text-green-400/90 font-mono text-xs hover:text-green-300 drop-shadow-[0_2px_8px_rgba(0,0,0,1)] uppercase tracking-wider font-bold transition-all bg-[#030f07]/80 backdrop-blur-md px-4 py-2 rounded-full border border-green-900/50"
         title="Chat with Customer Agent"
       >
         Chat with us
