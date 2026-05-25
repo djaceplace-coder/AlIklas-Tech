@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Navbar, Footer } from './components/Navigation';
+import { Navbar, Footer } from './pages/Navigation';
 import { Home } from './pages/Home';
 import { About, Services, Projects, Contact, Careers, GenericPage } from './pages/Pages';
 import { SolarCalculatorContent } from './pages/SolarCalculator';

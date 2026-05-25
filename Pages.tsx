@@ -118,12 +118,17 @@ export const Services: React.FC = () => {
 
 // --- PROJECTS GALLERY PAGE ---
 export const Projects: React.FC = () => {
-    // Array ready for the 5 images the user uploaded
+    // Array ready for the 5 videos and 5 images the user will upload
     const galleryItems = [
+        { type: 'video', src: "/project-video-1.mp4" },
         { type: 'image', src: "/project-image-1.jpg" },
+        { type: 'video', src: "/project-video-2.mp4" },
         { type: 'image', src: "/project-image-2.jpg" },
+        { type: 'video', src: "/project-video-3.mp4" },
         { type: 'image', src: "/project-image-3.jpg" },
+        { type: 'video', src: "/project-video-4.mp4" },
         { type: 'image', src: "/project-image-4.jpg" },
+        { type: 'video', src: "/project-video-5.mp4" },
         { type: 'image', src: "/project-image-5.jpg" },
     ];
 
@@ -138,11 +143,22 @@ export const Projects: React.FC = () => {
                 <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
                     {galleryItems.map((item, idx) => (
                         <div key={idx} className="bg-[#071a0e] rounded-xl overflow-hidden border border-green-900/30 hover:border-green-500/80 transition-colors shadow-lg break-inside-avoid">
-                            <img 
-                                src={item.src} 
-                                alt={`Project preview ${idx + 1}`} 
-                                className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700" 
-                            />
+                            {item.type === 'video' ? (
+                                <video 
+                                    src={item.src} 
+                                    autoPlay 
+                                    loop 
+                                    muted 
+                                    playsInline 
+                                    className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
+                                />
+                            ) : (
+                                <img 
+                                    src={item.src} 
+                                    alt={`Project preview ${idx + 1}`} 
+                                    className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700" 
+                                />
+                            )}
                         </div>
                     ))}
                 </div>

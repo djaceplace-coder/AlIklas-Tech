@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { EnergyFlowDiagram, CircuitSVG, SolarParticleCanvas } from '../components/Canvas';
+import { EnergyFlowDiagram, CircuitSVG, SolarParticleCanvas } from '../Canvas';
 import { SolarCalculatorContent } from './SolarCalculator';
 import { Shield, ChevronRight, CheckCircle2 } from 'lucide-react';
 
