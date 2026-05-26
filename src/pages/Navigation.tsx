@@ -1,6 +1,71 @@
 import React, { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
+const AnimatedLogo = () => (
+  <>
+    <style>{`
+      .morph-grid-iklas {
+        display: grid;
+        align-items: center;
+        animation: morphGridIklas 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      }
+      @keyframes morphGridIklas {
+        0%, 30% { grid-template-columns: 1fr; margin-left: 0rem; margin-right: 0.35rem; opacity: 1; }
+        40%, 65% { grid-template-columns: 0fr; margin-left: 0rem; margin-right: 0rem; opacity: 0; }
+        75%, 100% { grid-template-columns: 1fr; margin-left: 0rem; margin-right: 0.35rem; opacity: 1; }
+      }
+
+      .morph-iklas-text {
+        animation: morphIklasText 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      }
+      @keyframes morphIklasText {
+        0%, 30% { transform: translateX(0); }
+        40%, 65% { transform: translateX(-100%); }
+        75%, 100% { transform: translateX(0); }
+      }
+      
+      .morph-grid-sun {
+        display: grid;
+        align-items: center;
+        animation: morphGridSun 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      }
+      @keyframes morphGridSun {
+        0%, 35% { grid-template-columns: 0fr; margin-left: 0; opacity: 0; }
+        45%, 60% { grid-template-columns: 1fr; margin-left: 0.25rem; opacity: 1; }
+        70%, 100% { grid-template-columns: 0fr; margin-left: 0; opacity: 0; }
+      }
+
+      .morph-sun-text {
+        animation: morphSunText 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      }
+      @keyframes morphSunText {
+        0%, 35% { transform: translateX(100%); }
+        45%, 60% { transform: translateX(0); }
+        70%, 100% { transform: translateX(100%); }
+      }
+    `}</style>
+    <span className="font-display font-extrabold text-2xl tracking-tighter flex items-center uppercase py-1">
+      <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-green-500 mr-2 drop-shadow-sm">⚡</span>
+      
+      <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-green-100 relative z-10">AL</span>
+      
+      <span className="morph-grid-iklas overflow-hidden">
+        <span className="min-w-0">
+          <span className="whitespace-nowrap morph-iklas-text block text-transparent bg-clip-text bg-gradient-to-r from-white to-green-100">-IKLAS</span>
+        </span>
+      </span>
+      
+      <span className="text-green-600">TECH</span>
+      
+      <span className="morph-grid-sun overflow-hidden">
+        <span className="min-w-0 text-[20px] leading-none mb-1">
+          <span className="whitespace-nowrap morph-sun-text block drop-shadow-md">☀️</span>
+        </span>
+      </span>
+    </span>
+  </>
+);
+
 export const Navbar: React.FC<{ currentPage: string, setCurrentPage: (page: string) => void }> = ({ currentPage, setCurrentPage }) => {
   const [scrollY, setScrollY] = useState(0);
   const [mounted, setMounted] = useState(false);
@@ -42,11 +107,7 @@ export const Navbar: React.FC<{ currentPage: string, setCurrentPage: (page: stri
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <div className="flex-shrink-0 flex items-center cursor-pointer" onClick={() => handleNavClick('home')}>
-              <span className="font-display font-extrabold text-2xl tracking-tighter flex items-center">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-green-500 mr-2">⚡</span>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-green-100">Al-Iklas</span>
-                <span className="text-green-600 ml-1">Tech</span>
-              </span>
+              <AnimatedLogo />
             </div>
 
             {/* Desktop Nav */}
@@ -142,10 +203,8 @@ export const Footer: React.FC<{ setCurrentPage: (page: string) => void }> = ({ s
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           
           <div className="space-y-6">
-            <div className="font-display font-extrabold text-2xl tracking-tighter">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-green-500 mr-2">⚡</span>
-              <span className="text-white">Al-Iklas</span>
-              <span className="text-green-600 ml-1">Tech</span>
+            <div className="font-display font-extrabold tracking-tighter">
+              <AnimatedLogo />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
               Nigeria's Premier Solar & Electrical Engineering Authority. Power. Precision. Purpose.
