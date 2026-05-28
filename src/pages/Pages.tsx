@@ -118,14 +118,10 @@ export const Services: React.FC = () => {
 
 // --- PROJECTS GALLERY PAGE ---
 export const Projects: React.FC = () => {
-    // Array ready for the 5 images the user uploaded
-    const galleryItems = [
-        { type: 'image', src: "/project-image-1.jpg" },
-        { type: 'image', src: "/project-image-2.jpg" },
-        { type: 'image', src: "/project-image-3.jpg" },
-        { type: 'image', src: "/project-image-4.jpg" },
-        { type: 'image', src: "/project-image-5.jpg" },
-    ];
+    const galleryItems = Array.from({ length: 12 }, (_, i) => ({
+        type: 'image',
+        src: `/Newproject${i + 1}.jpeg`
+    }));
 
     return (
         <div className="w-full pt-28 pb-24">
@@ -166,7 +162,7 @@ export const Contact: React.FC = () => {
                      <p className="text-gray-400 mb-12">The engineers driving Nigeria's energy revolution.</p>
                      
                      <div className="inline-block bg-[#071a0e] border border-green-900/40 rounded-2xl overflow-hidden shadow-[0_4_30px_rgba(34,197,94,0.1)] text-left w-full max-w-sm hover:-translate-y-1 transition-transform">
-                          <img src="/Ceo.webp" alt="Engr Dolapo" loading="eager" fetchPriority="high" className="w-full h-72 object-cover object-[center_30%]" />
+                          <img src="/Newengineerlogo.jpeg" alt="Engr Dolapo" loading="eager" fetchPriority="high" className="w-full aspect-[3/4] object-cover object-top" />
                           <div className="p-6 relative">
                                <div className="absolute top-0 right-8 -translate-y-1/2 w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-xl shadow-[0_0_15px_#22c55e]">⚡</div>
                                <h3 className="font-display font-bold text-2xl text-white mb-1">Engr Dolapo</h3>

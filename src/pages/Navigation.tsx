@@ -209,11 +209,11 @@ export const Footer: React.FC<{ setCurrentPage: (page: string) => void }> = ({ s
               Nigeria's Premier Solar & Electrical Engineering Authority. Power. Precision. Purpose.
             </p>
             <div className="flex space-x-4">
-              {['LinkedIn', 'Twitter', 'Facebook', 'Instagram'].map(social => (
-                <a key={social} href="#" className="w-10 h-10 rounded-full bg-green-950 border border-green-900/50 flex items-center justify-center text-green-500 hover:bg-green-900 hover:text-white transition-colors">
-                  <span className="text-xs font-mono">{social.substring(0,2)}</span>
-                </a>
-              ))}
+              <a href="https://www.tiktok.com/@altech_solar?_r=1&_t=ZS-96kPnL2zMcn" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-green-950 border border-green-900/50 flex items-center justify-center text-green-500 hover:bg-green-900 hover:text-white transition-colors">
+                <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2-1.74 2.89 2.89 0 0 1 2.89-2.89 2.88 2.88 0 0 1 2.54 1.49l3.12-1.7a6.22 6.22 0 0 0-5.66-3.15 6.34 6.34 0 1 0 6.13 8.35v-6.9a8.18 8.18 0 0 0 3.4 1.13V7.07a5 5 0 0 1-.05-.38z"/>
+                </svg>
+              </a>
             </div>
           </div>
 

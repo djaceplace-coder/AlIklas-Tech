@@ -175,6 +175,19 @@ export const Home: React.FC<{ setCurrentPage: (page: string) => void }> = ({ set
                </button>
             </div>
 
+            {/* TikTok Live Projects Banner */}
+            <a href="https://www.tiktok.com/@altech_solar?_r=1&_t=ZS-96kPnL2zMcn" target="_blank" rel="noreferrer" className={`mt-8 group inline-flex items-center gap-3 px-5 py-3 rounded-full bg-[#071a0e] border border-green-900/50 hover:border-green-500/50 transition-all duration-300 hover:bg-[#0a2414] hover:shadow-[0_0_20px_rgba(34,197,94,0.1)] ${mounted ? 'animate-stagger-in' : 'opacity-0'}`} style={{animationDelay: '700ms'}}>
+                <div className="w-8 h-8 rounded-full bg-green-950/80 flex items-center justify-center border border-green-900/50 group-hover:border-green-500/30 transition-colors">
+                   <svg fill="currentColor" viewBox="0 0 24 24" className="w-4 h-4 text-green-500">
+                      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2-1.74 2.89 2.89 0 0 1 2.89-2.89 2.88 2.88 0 0 1 2.54 1.49l3.12-1.7a6.22 6.22 0 0 0-5.66-3.15 6.34 6.34 0 1 0 6.13 8.35v-6.9a8.18 8.18 0 0 0 3.4 1.13V7.07a5 5 0 0 1-.05-.38z"/>
+                   </svg>
+                </div>
+                <div className="text-left flex flex-col justify-center">
+                    <span className="block text-[10px] font-mono text-gray-500 tracking-widest uppercase leading-none mb-1">Live Portfolio</span>
+                    <span className="block text-sm font-sans font-medium text-gray-300 group-hover:text-white transition-colors leading-none">View projects on TikTok</span>
+                </div>
+            </a>
+
             <div className={`mt-16 text-xs font-mono font-medium tracking-widest text-gray-500 uppercase flex flex-wrap justify-center gap-6 ${mounted ? 'animate-stagger-in' : 'opacity-0'}`} style={{animationDelay: '800ms'}}>
                 <span>NEMSA</span>
                 <span className="text-gray-700 font-sans">•</span>
@@ -310,9 +323,9 @@ export const Home: React.FC<{ setCurrentPage: (page: string) => void }> = ({ set
 
              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                  {[
-                      { name: "Kaduna State School Electrification", kw: 850, type: "Mini-Grid", state: "Kaduna", year: 2024, maxKw: 2400, img: "/project-image-1.jpg", details: "A comprehensive off-grid solution powering 15 schools across rural Kaduna. System utilizes deep-cycle LiFePO4 storage to guarantee 24/7 power for computer labs and administrative blocks." },
-                      { name: "Dangote Logistics Warehouse Complex", kw: 2400, type: "Industrial Solar", state: "Lagos", year: 2024, maxKw: 2400, img: "/project-image-2.jpg", details: "Massive scale rooftop PV array designed to completely offset daytime diesel consumption for their primary staging warehouse. Features advanced active harmonic filtering." },
-                      { name: "Gwarimpa Estate Phase 3", kw: 640, type: "Residential Solar", state: "Abuja", year: 2023, maxKw: 2400, img: "/project-image-3.jpg", details: "Community micro-grid serving 50 premium residential units. Features centralized string inverters with localized battery banks for individual households." },
+                      { name: "Kaduna State School Electrification", kw: 850, type: "Mini-Grid", state: "Kaduna", year: 2024, maxKw: 2400, img: "/Newproject1.jpeg", details: "A comprehensive off-grid solution powering 15 schools across rural Kaduna. System utilizes deep-cycle LiFePO4 storage to guarantee 24/7 power for computer labs and administrative blocks." },
+                      { name: "Dangote Logistics Warehouse Complex", kw: 2400, type: "Industrial Solar", state: "Lagos", year: 2024, maxKw: 2400, img: "/Newproject2.jpeg", details: "Massive scale rooftop PV array designed to completely offset daytime diesel consumption for their primary staging warehouse. Features advanced active harmonic filtering." },
+                      { name: "Gwarimpa Estate Phase 3", kw: 640, type: "Residential Solar", state: "Abuja", year: 2023, maxKw: 2400, img: "/Newproject3.jpeg", details: "Community micro-grid serving 50 premium residential units. Features centralized string inverters with localized battery banks for individual households." },
                  ].map((proj, idx) => {
                      const isExpanded = expandedProject === idx;
                      return (
