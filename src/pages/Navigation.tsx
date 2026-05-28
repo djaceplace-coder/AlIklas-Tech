@@ -157,8 +157,7 @@ export const Navbar: React.FC<{ currentPage: string, setCurrentPage: (page: stri
           </div>
         </div>
 
-        {/* Progress Bar */}
-        <div className="absolute bottom-0 left-0 h-[2px] bg-gradient-brand transition-all duration-100 ease-out" style={{ width: `${progress}%` }}></div>
+        {/* Removed Progress Bar per user request */}
       </nav>
 
       {/* Mobile Menu */}

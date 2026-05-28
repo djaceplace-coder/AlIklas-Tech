@@ -24,49 +24,49 @@ export const Home: React.FC<{ setCurrentPage: (page: string) => void }> = ({ set
       icon: "☀️", title: "Solar PV Systems & Inverters",
       desc: "Full engineering and installation of residential to utility-scale solar PV systems and hybrid inverters with remote monitoring.",
       specs: ["5kW – 5MW capacities", "Hybrid inverter setups", "NEMSA-certified wiring", "Battery integration"],
-      color: "#F59E0B", badge: "Most Popular", img: "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&q=80&w=800"
+      color: "#F59E0B", badge: "Most Popular", img: "/1.jpeg"
     },
     {
       icon: "⚡", title: "Electrical & Home Services",
       desc: "Complete electrical works, from LV/MV installations to dedicated home electrical maintenance and panel upgrades.",
       specs: ["LV/MV distribution", "Home electrical repair", "Panel board upgrades", "Electrical management"],
-      color: "#3B82F6", badge: null, img: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=800"
+      color: "#3B82F6", badge: null, img: "/2.jpeg"
     },
     {
       icon: "🏠", title: "Solar Home Roof Panels",
       desc: "Premium residential solar panel installations tailored for Nigerian homes, optimizing roof space for maximum yield.",
       specs: ["Aesthetic mounting", "Leek-proof seals", "High-efficiency panels", "Smart home ready"],
-      color: "#10B981", badge: "Residential", img: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&q=80&w=800"
+      color: "#10B981", badge: "Residential", img: "/3.jpeg"
     },
     {
       icon: "💸", title: "Flexible Solar Financing",
       desc: "Premium Tier-1 solar systems made accessible through custom installmental payment plans and flexible financing.",
       specs: ["12-36 month plans", "Low initial deposit", "Zero markup", "Pay-as-you-go tech"],
-      color: "#EC4899", badge: "New Offering", img: "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&q=80&w=800"
+      color: "#EC4899", badge: "New Offering", img: "/4.jpeg"
     },
     {
       icon: "📦", title: "Equipment Import & Supply",
       desc: "Direct importers and suppliers of all kinds of premium solar and electrical materials. Exceptional quality at wholesale scales.",
       specs: ["Tier-1 Solar Panels", "Hybrid Inverters", "Cables & Wiring", "Wholesale supply"],
-      color: "#22C55E", badge: "Wholesale", img: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&q=80&w=800"
+      color: "#22C55E", badge: "Wholesale", img: "/5.jpeg"
     },
     {
       icon: "📷", title: "Solar Surveillance Security",
       desc: "HD Dual Lens Solar PTZ Cameras designed for 24/7 off-grid security. Independent power and connectivity for any location.",
       specs: ["HD Dual Lens", "Solar PTZ Cameras", "24/7 Monitoring", "No-grid required"],
-      color: "#A8A29E", badge: "High Demand", img: "https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?auto=format&fit=crop&q=80&w=800"
+      color: "#A8A29E", badge: "High Demand", img: "/6.jpeg"
     },
     {
       icon: "🔋", title: "Battery Energy Storage",
       desc: "High-density LiFePO4 and NMC storage solutions tailored to displace diesel generation completely during outages.",
       specs: ["10kWh – 2MWh capacity", "Smart BMS control", "Peak-shaving", "Deep-cycle durability"],
-      color: "#F97316", badge: null, img: "https://images.unsplash.com/photo-1565800489013-c64859d0c2d5?auto=format&fit=crop&q=80&w=800"
+      color: "#F97316", badge: null, img: "/7.jpeg"
     },
     {
       icon: "🏭", title: "Power-as-a-Service",
       desc: "Zero-capex solar for commercial spaces. We design, finance, install, and operate the plant while you pay for consumed power.",
       specs: ["Zero initial capex", "Pay-per-kWh", "Diesel displacement", "24/7 O&M"],
-      color: "#06B6D4", badge: "C&I Focus", img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800"
+      color: "#06B6D4", badge: "C&I Focus", img: "/8.jpeg"
     }
   ];
 
