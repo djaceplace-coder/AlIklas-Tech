@@ -44,7 +44,7 @@ export const Products: React.FC = () => {
                     {PRODUCTS.map((product, idx) => (
                         <div key={idx} className="bg-[#071a0e] rounded-2xl border border-green-900/30 overflow-hidden group hover:border-green-500/60 transition-all flex flex-col">
                             <div className="h-56 bg-[#020b06] border-b border-green-900/30 relative overflow-hidden shrink-0">
-                                <img src={product.img} alt={product.name} className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 group-hover:opacity-100 transition-all duration-700 mix-blend-screen" />
+                                <img src={product.img} alt={product.name} loading="eager" fetchPriority="high" className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 group-hover:opacity-100 transition-all duration-700 mix-blend-screen" />
                                 <div className="absolute top-4 left-4">
                                      <span className="px-3 py-1 bg-black/60 backdrop-blur-md border border-green-900/50 text-green-400 text-xs font-bold uppercase rounded-full">
                                          {product.category}

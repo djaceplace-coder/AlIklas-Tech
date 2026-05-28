@@ -19,7 +19,7 @@ export const About: React.FC<{ setCurrentPage: (page: string) => void }> = () =>
                         <p className="text-lg text-gray-400 leading-relaxed mb-8">
                             As the grid faltered, we pivoted our deep electrical expertise into solar and energy storage. We don't just sell panels; we engineer fully integrated, NEMSA-certified power plants, import top-tier equipment, and provide 24/7 solar surveillance systems.
                         </p>
-                        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&q=80&w=2070" className="w-full h-48 sm:h-64 object-cover rounded-2xl border border-green-900/50 shadow-[0_0_30px_rgba(34,197,94,0.15)]" alt="Solar Panels" />
+                        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&q=80&w=2070" loading="eager" fetchPriority="high" className="w-full h-48 sm:h-64 object-cover rounded-2xl border border-green-900/50 shadow-[0_0_30px_rgba(34,197,94,0.15)]" alt="Solar Panels" />
                     </div>
                     <div className="grid grid-cols-2 gap-6 content-center">
                          {[
@@ -84,7 +84,7 @@ export const Services: React.FC = () => {
                     ].map((s, i) => (
                         <div key={i} className={`flex flex-col md:flex-row gap-8 lg:gap-16 items-center ${i%2 !== 0 ? 'md:flex-row-reverse' : ''}`}>
                             <div className="flex-1 w-full bg-[#071a0e] aspect-[4/3] md:aspect-square rounded-3xl border border-green-900/30 flex items-center justify-center relative overflow-hidden group hover:border-green-500/50 transition-colors cursor-pointer">
-                                <img src={s.img} alt={s.title} className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-700 mix-blend-screen" />
+                                <img src={s.img} alt={s.title} loading="eager" fetchPriority="high" className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-700 mix-blend-screen" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#030f07] via-transparent to-transparent opacity-90"></div>
                                 <div className="absolute -right-4 -bottom-4 text-[100px] sm:text-[140px] md:text-[200px] font-mono font-black text-white/5 group-hover:text-green-500/10 transition-colors select-none leading-none z-10 block">
                                     {s.num}
@@ -141,6 +141,8 @@ export const Projects: React.FC = () => {
                             <img 
                                 src={item.src} 
                                 alt={`Project preview ${idx + 1}`} 
+                                loading="eager" 
+                                fetchPriority="high"
                                 className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700" 
                             />
                         </div>
@@ -164,7 +166,7 @@ export const Contact: React.FC = () => {
                      <p className="text-gray-400 mb-12">The engineers driving Nigeria's energy revolution.</p>
                      
                      <div className="inline-block bg-[#071a0e] border border-green-900/40 rounded-2xl overflow-hidden shadow-[0_4_30px_rgba(34,197,94,0.1)] text-left w-full max-w-sm hover:-translate-y-1 transition-transform">
-                          <img src="/Ceo.webp" alt="Engr Dolapo" className="w-full h-72 object-cover object-[center_30%]" />
+                          <img src="/Ceo.webp" alt="Engr Dolapo" loading="eager" fetchPriority="high" className="w-full h-72 object-cover object-[center_30%]" />
                           <div className="p-6 relative">
                                <div className="absolute top-0 right-8 -translate-y-1/2 w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-xl shadow-[0_0_15px_#22c55e]">⚡</div>
                                <h3 className="font-display font-bold text-2xl text-white mb-1">Engr Dolapo</h3>

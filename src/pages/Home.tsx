@@ -227,7 +227,7 @@ export const Home: React.FC<{ setCurrentPage: (page: string) => void }> = ({ set
               {SERVICES.map((s, idx) => (
                   <div key={idx} className="group relative bg-[#071a0e] border border-green-900/30 rounded-[20px] p-6 sm:p-8 transition-all duration-350 hover:-translate-y-2 hover:border-green-500/60 overflow-hidden cursor-pointer flex flex-col min-h-[340px]">
                       
-                      <img src={s.img} alt={s.title} className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-50 transition-opacity duration-700 mix-blend-screen" />
+                      <img src={s.img} alt={s.title} loading="eager" fetchPriority="high" className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-50 transition-opacity duration-700 mix-blend-screen" />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#030f07] via-[#030f07]/90 to-transparent"></div>
                       
                       {/* Active Line (Hover) */}
@@ -318,7 +318,7 @@ export const Home: React.FC<{ setCurrentPage: (page: string) => void }> = ({ set
                      return (
                      <div key={idx} onClick={() => setExpandedProject(isExpanded ? null : idx)} className={`group relative bg-[#071a0e] rounded-xl overflow-hidden border border-green-900/30 p-6 hover:border-green-500 hover:shadow-[0_0_30px_rgba(34,197,94,0.15)] transition-all cursor-pointer flex flex-col ${isExpanded ? 'h-auto ring-1 ring-green-500' : 'h-[360px]'}`}>
                          
-                         <img src={proj.img} alt={proj.name} className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-50 transition-opacity duration-700 mix-blend-screen" />
+                         <img src={proj.img} alt={proj.name} loading="eager" fetchPriority="high" className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-50 transition-opacity duration-700 mix-blend-screen" />
                          <div className="absolute inset-0 bg-gradient-to-t from-[#020b06] via-[#020b06]/80 to-transparent"></div>
                          <div className="absolute top-0 left-0 w-1 h-full bg-green-600 z-20"></div>
 
