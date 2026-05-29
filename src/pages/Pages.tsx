@@ -137,9 +137,9 @@ export const Projects: React.FC = () => {
                             <img 
                                 src={item.src} 
                                 alt={`Project preview ${idx + 1}`} 
-                                loading="eager" 
-                                fetchPriority="high"
-                                className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700" 
+                                loading="lazy" 
+                                decoding="async"
+                                className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700 bg-[#030f07]" 
                             />
                         </div>
                     ))}
